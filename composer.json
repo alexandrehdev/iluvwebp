@@ -1,0 +1,15 @@
+{
+    "name": "conversor/webp",
+    "autoload": {
+        "psr-4": {
+            "Conversor\\Webp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alexandrehdev",
+            "email": "hallyssonrdev@gmail.com"
+        }
+    ],
+    "require": {}
+}
