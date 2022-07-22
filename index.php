@@ -1,6 +1,6 @@
 <?php
-  require "vendor/autoload.php";
-	use Conversor\Webp\Page\Home;
+ require "vendor/autoload.php";
+ 
 
-  echo Home::getHome();
+ require_once"web/web.php";
 
