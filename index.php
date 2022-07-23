@@ -1,6 +1,7 @@
 <?php
- require "vendor/autoload.php";
- 
+require "vendor/autoload.php";
 
- require_once"web/web.php";
+
+
+require_once 'web/web.php';
 

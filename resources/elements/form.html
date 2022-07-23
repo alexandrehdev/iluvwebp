@@ -1,13 +1,20 @@
 <div class="main-form">
-<form method="POST" action="/sendImage" enctype="multipart/form-data">
-	<div class="description-img">
-		<label>Add an image</label>
-	</div>
+ <form method="POST" action="/sendImage" enctype="multipart/form-data">
 	<div>
-		<input type="file" name="image-convert" id="image">
-		<label class="image-label" for="image">
-			<i class="fa-solid fa-plus plus-icon"></i>
-		</label>
+		<input type="file" name="fileToUpload" id="upload-image">
+        <label for="upload-image" id="label-image">
+            <i class="fa-solid fa-image"></i>
+            Upload Image
+        </label>
 	</div>
-</form>
+    <div id="modal-box">
+         <div id="close-button">
+             <i class="fa-solid fa-xmark close-icon"></i>
+         </div>
+         <div>Image Info</div>
+             <div id="convert-box">
+             <input type="submit" value="Convert" id="convert-btn" />
+         </div>
+    </div>
+    </form>
 </div>

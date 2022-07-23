@@ -17,15 +17,15 @@ class Home{
 	}
 
 
-	public static function getHome() :string{
+	public static function getHome() :void{
 
 		$elements = self::nameElements();
 		$contents = View::getElements();
 
-		return View::render('index',[
-			$elements[0] => $contents[0],
-			$elements[1] => $contents[1],
-			$elements[2] => $contents[2]
+		echo View::render('index',[
+			$elements[0] => $contents[0], //footer
+			$elements[1] => $contents[1], //form
+            $elements[2] => $contents[2], //header
 		]);
 
 	}
