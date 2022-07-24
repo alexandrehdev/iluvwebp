@@ -8,7 +8,8 @@ route('/', function(){
 });
 
 route('/sendImage',function(){
-
+    $data = (new Conversor())->getImage();
+    var_dump($data);
 });
 
 
