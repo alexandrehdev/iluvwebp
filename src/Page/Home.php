@@ -5,6 +5,8 @@ use Conversor\Webp\Utils\View;
 
 class Home{
 
+    public static $checkImg = 'resources/img/';
+
 	public static function nameElements() :array{
 		$elements = View::getNameElements();
 		$elements = array_map(function($item){
@@ -17,8 +19,7 @@ class Home{
 	}
 
 
-	public static function getHome() :void{
-
+    public static function getHome() :void{
 		$elements = self::nameElements();
 		$contents = View::getElements();
 
@@ -28,8 +29,6 @@ class Home{
             $elements[2] => $contents[2], //header
 		]);
 
-	}
+    }
 
 }
-
-

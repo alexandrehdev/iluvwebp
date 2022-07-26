@@ -1,15 +1,15 @@
 <?php
 use Conversor\Webp\Controller\Conversor;
 use Conversor\Webp\Page\Home;
+use Conversor\Webp\Page\Data;
 $routes = [];
 
 route('/', function(){
-    return Home::getHome();
+    Data::getMainPage();
 });
 
 route('/sendImage',function(){
-    $data = (new Conversor())->getImage();
-    var_dump($data);
+    Data::convertInPage();
 });
 
 

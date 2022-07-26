@@ -74,7 +74,7 @@ input[type="file"]{
     flex-direction:column;
     justify-content: space-between;
     opacity: 0;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
     pointer-events: none;
     margin-top: -40px;
 }
@@ -96,7 +96,6 @@ input[type="file"]{
 #convert-box{
     display: flex;
     justify-content: center;
-    /* margin: auto; */
 }
 
 #convert-btn{
@@ -108,8 +107,8 @@ input[type="file"]{
     text-transform:uppercase;
     padding:15px;
     font-size:17px;
-    /* position: relative; */
-    /* bottom:-230px; */
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
 }
 
 #convert-btn:hover{
