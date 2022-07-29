@@ -115,5 +115,24 @@ input[type="file"]{
     background: var(--sec-purple);
 }
 
+#download-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    top: 25%;
+}
+
+#download-area a{
+    text-decoration: none;
+    color: var(--main-white);
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+    padding: 50px;
+    background: var(--sec-purple);
+    border-radius: 20px;
+    font-size: 30px;
+}
 
 
