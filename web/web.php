@@ -1,14 +1,12 @@
 <?php
-use Conversor\Webp\Controller\Conversor;
 use Conversor\Webp\Page\Home;
 $routes = [];
-
 route('/', function(){
-    return Home::getHome();
+    Home::getHome();
 });
 
-route('/sendImage',function(){
-
+route('/convert',function(){
+    Home::getDownload();
 });
 
 
@@ -26,4 +24,5 @@ function run(){
 		if ($path !== $url) continue;
 		$callback();
 	}
-}
+}             
+

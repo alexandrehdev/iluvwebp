@@ -5,22 +5,21 @@ use FilesystemIterator;
 
 class View{
 
-	public static $contentView;
-	public static $pathToElements = 'resources/elements/';
+    public static $pathToElements = 'resources/elements/';
 
-
+    /**
+     *@var string $view
+     */
 	private static function getContentView(string $view) :string{
 		$file = __DIR__ . "/../../resources/{$view}.html";
 		return file_exists($file) ? file_get_contents($file) : '';
 	}
-
 
 	public static function getNameElements() :array{
 		$elements = scandir(self::$pathToElements);
 		$elements = array_slice($elements,2);
 
 		return $elements;
-
 	}
 
 	public static function getElements() :array{
