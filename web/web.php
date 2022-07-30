@@ -1,7 +1,6 @@
 <?php
 use Conversor\Webp\Page\Home;
 $routes = [];
-
 route('/', function(){
     Home::getHome();
 });
@@ -25,4 +24,5 @@ function run(){
 		if ($path !== $url) continue;
 		$callback();
 	}
-}
+}             
+

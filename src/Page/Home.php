@@ -32,14 +32,17 @@ class Home{
     }
 
     public static function getDownload(){
-         $elements = self::nameElements();
-         $contents = View::getElements();
+        $conversor = new Conversor;
+        $conversor->convertImage();
 
-         echo View::render('index',[
+        $elements = self::nameElements();
+        $contents = View::getElements();
+
+        echo View::render('index',[
 	        $elements[0] => $contents[0], 
 	        $elements[1] => $contents[3], 
             $elements[2] => $contents[2], 
-         ]);
+        ]);
     }
 
 }

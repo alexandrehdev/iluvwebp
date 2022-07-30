@@ -6,11 +6,9 @@ let labelImage = document.getElementById('label-image');
 let imageName = document.getElementById('image-name');
 let imageSize = document.getElementById('image-size');
 
-
 labelImage.addEventListener('click',function(){
   file.value = '';
 });
-
 
 file.addEventListener('change',function(){
     imageName.innerHTML = imageName.textContent + file.files[0]['name'];
@@ -32,6 +30,4 @@ if(window.history.replaceState ){
 	window.history.replaceState( null, null, window.location.href);
 }
 
-
-
- 
+                              

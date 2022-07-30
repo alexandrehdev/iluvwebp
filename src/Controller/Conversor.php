@@ -48,10 +48,10 @@ namespace Conversor\Webp\Controller;
          $extension = end(explode(".", $file));
          $newImage = str_replace("." . $extension, ".webp", $imagePath);
          $quality = 100;
+         $this->downloadLink($newImage);
          imagewebp($image,$newImage,$quality);
-         /* $this->downloadLink($newImage); */
+         unlink($imagePath);
      }
-
 
      public function PngToWebp($img) :void{
          $image = $this->getImage();
@@ -60,30 +60,22 @@ namespace Conversor\Webp\Controller;
          $image = imagecreatefrompng($imagePath);
          $newImage = str_replace(".png",".webp",$imagePath);
          $quality = 100;
+         $this->downloadLink($newImage);
          imagewebp($image,$newImage,$quality);
+         unlink($imagePath);
      }                         
 
-
-     public function isDirectoryEmpty() :bool{
-        $types = ["jpeg","png"];
-        $jpgDir = "resources/img/";
-
-        foreach($types as $type){
-           $data = scandir($jpgDir . $type);
-           $dataValues = array_slice($data,2);
-        }
-        $numFiles = count($dataValues);
-        $response = ($numFiles == 0) ? true : false;
-
-        return $response;
-     }
-
-     public function downloadLink(string $pathDownload){
+     public function downloadLink(string $pathDownload) :void{
          $downloadHtml = "resources/elements/download.html";
-         $content = "<a href='{$pathDownload}' download></a>";
-         file_put_contents($downloadHtml,$content, FILE_APPEND);
+
+         $content = "<div id='download-area'>
+                        <a name='downloadBtn'id='btnDown'href='{$pathDownload}'download>
+                            Download Image <i class='fa-solid fa-download'></i>
+                       </a>
+                    </div>";
+
+         file_put_contents($downloadHtml,$content);
      }
-    
 
 
 	

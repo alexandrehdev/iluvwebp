@@ -7,7 +7,9 @@ class View{
 
     public static $pathToElements = 'resources/elements/';
 
-
+    /**
+     *@var string $view
+     */
 	private static function getContentView(string $view) :string{
 		$file = __DIR__ . "/../../resources/{$view}.html";
 		return file_exists($file) ? file_get_contents($file) : '';
