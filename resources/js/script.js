@@ -2,13 +2,15 @@ let modal = document.getElementById('modal-box');
 let file = document.getElementById('upload-image');
 let closeButton = document.getElementById('close-button');
 let labelImage = document.getElementById('label-image');
-
+let btnDownload = document.getElementById('btnDown');
 let imageName = document.getElementById('image-name');
 let imageSize = document.getElementById('image-size');
 
-labelImage.addEventListener('click',function(){
-  file.value = '';
-});
+btnDownload.onclick = function(){
+    setTimeout(function(){
+        document.location.href = "/";
+    },2000);
+}
 
 file.addEventListener('change',function(){
     imageName.innerHTML = imageName.textContent + file.files[0]['name'];
